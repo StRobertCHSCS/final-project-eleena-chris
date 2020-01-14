@@ -7,11 +7,11 @@ HEIGHT = 480
 
 # player variables
 
-truck_x = WIDTH/2
-truck_y = HEIGHT/2 
+player_x = WIDTH/2
+player_y = HEIGHT/2 
 
-truck_w = []
-truck_l = []
+player_w = []
+player_l = []
 
 #rock variables 
 rock_x_pos = []
@@ -39,3 +39,35 @@ d_key_img = arcade.load_texture('images/D_key.png')
 pause_img = arcade.load_texture('images/pause.png')
 
 #health bar variables 
+player_health = 100
+player_max_health = 100 
+player_alvie = True 
+
+#truck movements 
+up_pressed = False 
+down_pressed = False 
+left_pressed = False 
+right_pressed = False 
+
+#pause button on game screen 
+BTN_pause = 
+
+#pause screen button back to game screen 
+
+#end screen button 
+
+#menu screen button on pause screen 
+
+#start button variables 
+
+#instructions button variables 
+
+#screen variables 
+current_screen = "menu"
+
+def setup():
+    arcade.open_window(WIDTH, HEIGHT, "My Arcade Game")
+    arcade.set_background_color(arcade.color.DARK_MOSS_GREEN)
+    arcade.schedule(update, 1/60)
+
+    
