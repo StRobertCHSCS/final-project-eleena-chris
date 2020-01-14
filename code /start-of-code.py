@@ -1,4 +1,4 @@
-import arcade mean 
+import arcade 
 import random
 import math
 
@@ -32,10 +32,10 @@ rock_img = arcade.load_texture()
 palm_tree_img = arcade.load_texture('images/palm tree.png')
 trench_img = arcade.load_texture('images/trench.png')
 game_background = arcade.load_texture()
-w_key_img = 
-s_key_img = 
-a_key_img = 
-d_key_img = 
-pause_img = 
+w_key_img = arcade.load_texture('images/W_key.png')
+s_key_img = arcade.load_texture('images/S_key.png')
+a_key_img = arcade.load_texture('images/A_key.png')
+d_key_img = arcade.load_texture('images/D_key.png')
+pause_img = arcade.load_texture('images/pause.png')
 
 #health bar variables 
