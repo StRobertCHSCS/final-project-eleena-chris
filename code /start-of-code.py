@@ -56,6 +56,8 @@ BTN_pause_Y = 1
 BTN_pasue_WIDTH = 2
 BTN_pause_HEIGHT = 3 
 BTN_pause_IS_CLICKED = 4 
+BTN_pause_COLOR = 5 
+
 
 #pause screen button back to game screen 
 
