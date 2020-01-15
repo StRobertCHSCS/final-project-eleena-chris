@@ -50,7 +50,7 @@ left_pressed = False
 right_pressed = False 
 
 #pause button on game screen 
-BTN_pause = 
+BTN_pause =  
 
 #pause screen button back to game screen 
 
@@ -98,6 +98,6 @@ def update(delta_time):
     if right_pressed == True:
         player_x += 10 
 
-
+    
 
 
