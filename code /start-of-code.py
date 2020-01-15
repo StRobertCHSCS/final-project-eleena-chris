@@ -70,4 +70,34 @@ def setup():
     arcade.set_background_color(arcade.color.DARK_MOSS_GREEN)
     arcade.schedule(update, 1/60)
 
-    
+    window = arcade.get_window()
+    window.on_draw = on_draw 
+    window.on_key_press = on_key_press
+    window.on_key_release = on_key_release
+    window.on_mouse_press = on_mouse_press
+    window.on_mouse_release = on_mouse_release
+
+    arcade.run()
+
+def update(delta_time):
+    global player_health, player_y, player_x, player_alvie
+    global current_screen
+    global up_pressed, down_pressed, left_pressed, right_pressed
+    global rock_x_pos, rock_big_y_pos, rock_radius
+    global player_w, player_l
+    global rock_big_y_pos, rock_big_x_pos
+    global timer 
+
+    if up_pressed == True:
+        player_y += 10 
+    if down_pressed == True:
+        player_y -= 10 
+    global player_x
+    if left_pressed == True:
+        player_x -= 10 
+    if right_pressed == True:
+        player_x += 10 
+
+
+
+
