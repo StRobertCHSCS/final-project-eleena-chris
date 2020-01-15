@@ -50,7 +50,12 @@ left_pressed = False
 right_pressed = False 
 
 #pause button on game screen 
-BTN_pause = 
+button_pause = [WIDTH/2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN_NOSE]
+BTN_pause_X = 0 
+BTN_pause_Y = 1 
+BTN_pasue_WIDTH = 2
+BTN_pause_HEIGHT = 3 
+BTN_pause_IS_CLICKED = 4 
 
 #pause screen button back to game screen 
 
