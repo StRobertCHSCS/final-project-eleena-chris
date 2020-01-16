@@ -148,7 +148,7 @@ def update(delta_time):
             rock_y_pos[index] = random.randrange(HEIGHT, HEIGHT + 50)
             rock_x_pos[index] = random.randrange(0, WIDTH)
     
-    
+#rock collisions     
     for i, (x, y) in enumerate(zip(rock_x_pos, rock_y_pos)):
         a = x - player_x
         b = y - player_y
@@ -157,7 +157,6 @@ def update(delta_time):
             player_health -= 25 
             del rock_x_pos[i]
             del rock_y_pos[i]
-
         
          
 
