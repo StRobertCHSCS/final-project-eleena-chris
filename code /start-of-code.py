@@ -157,8 +157,39 @@ def update(delta_time):
             player_health -= 25 
             del rock_x_pos[i]
             del rock_y_pos[i]
+
+#score update 
+if current_screen == "game":
+    timer += 0.5 
+elif current_screen == "menu":
+    timer += 0 
+elif current_screen == "instructions":
+    timer += 0 
+elif current_screen == "End":
+    timer += 0 
+elif current_screen == "pause":
+    timer += 0 
+elif  
         
-         
+#Player Health Update
+if player_health == 0:
+    player_alive = False
+
+if player_alive == False:
+    current_screen = "End"
+
+# The Boundaries
+if player_y >= 480:
+    up_pressed = False
+
+if player_y <= 0:
+    down_pressed = False
+
+if player_x <= 0:
+    left_pressed = False
+
+if player_x <= 635:
+    right_pressed = False    
 
 
 
