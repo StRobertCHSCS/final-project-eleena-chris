@@ -135,6 +135,7 @@ def update(delta_time):
     global rock_big_y_pos, rock_big_x_pos
     global timer 
 
+# Player Movment
     if up_pressed == True:
         player_y += 10 
     if down_pressed == True:
