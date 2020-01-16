@@ -53,17 +53,57 @@ BTN_pasue_WIDTH = 2
 BTN_pause_HEIGHT = 3 
 BTN_pause_IS_CLICKED = 4 
 BTN_pause_COLOR = 5 
-
+BTN_pause_COLOR_CLICKED = 6
 
 #pause screen button back to game screen 
+button_pause_screen = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
+BTN_pause_screen_X = 0
+BTN_pause_screen_Y = 1
+BTN_pasue_WIDTH = 2
+BTN_pause_HEIGHT = 3
+BTN_pause_IS_CLICKED = 4
+BTN_pause_COLOR = 5
+BTN_pause_COLOR_CLICKED = 6
 
 #end screen button 
+button_end = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
+BTN_end_X = 0 
+BTN_end_Y = 1
+BTN_end_WIDTH = 2
+BTN_end_HEIGHT = 3
+BTN_end_IS_CLICKED = 4
+BTN_end_COLOR = 5
+BTN_end_COLOR_CLICKED = 6
 
 #menu screen button on pause screen 
+button_menu = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
+BTN_menu_X = 0
+BTN_menu_Y = 1
+BTN_menu_WIDTH = 2
+BTN_menu_HEIGHT = 3
+BTN_menu_IS_CLICKED = 4
+BTN_menu_COLOR = 5
+BTN_menu_COLOR_CLICKED = 6
 
 #start button variables 
+button_end = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
+BTN_end_X = 0
+BTN_end_Y = 1
+BTN_end_WIDTH = 2
+BTN_end_HEIGHT = 3
+BTN_end_IS_CLICKED = 4
+BTN_end_COLOR = 5
+BTN_end_COLOR_CLICKED = 6
 
 #instructions button variables 
+button3 = [WIDTH / 2, 325, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BRONZE]
+BTN_3_X = 0
+BTN_3_Y = 1
+BTN_3_WIDTH = 2
+BTN_3_HEIGHT = 3
+BTN_3_IS_CLICKED = 4
+BTN_3_COLOR = 5
+BTN_3_COLOR_CLICKED = 6
 
 #screen variables 
 current_screen = "menu"
@@ -90,6 +130,7 @@ def update(delta_time):
     global player_w, player_l
     global timer 
 
+# Player Movment
     if up_pressed == True:
         player_y += 10 
     if down_pressed == True:
@@ -100,7 +141,7 @@ def update(delta_time):
     if right_pressed == True:
         player_x += 10 
 
-#asteroids 
+#Rocks
     for index in range(len(rock_y_pos)):
         rock_y_pos[index] -= 6 
         if rock_y_pos[index] < 0:
