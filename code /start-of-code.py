@@ -157,10 +157,10 @@ def update(delta_time):
             player_health -= 25 
             del rock_x_pos[i]
             del rock_y_pos[i]
-    
 
         
          
+
 
 
 
