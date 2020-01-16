@@ -169,7 +169,7 @@ elif current_screen == "End":
     timer += 0 
 elif current_screen == "pause":
     timer += 0 
-elif  
+elif
         
 #Player Health Update
 if player_health == 0:
