@@ -88,9 +88,26 @@ BTN_menu_HEIGHT = 3
 BTN_menu_IS_CLICKED = 4
 BTN_menu_COLOR = 5
 BTN_menu_COLOR_CLICKED = 6
+
 #start button variables 
+button_end = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
+BTN_end_X = 0
+BTN_end_Y = 1
+BTN_end_WIDTH = 2
+BTN_end_HEIGHT = 3
+BTN_end_IS_CLICKED = 4
+BTN_end_COLOR = 5
+BTN_end_COLOR_CLICKED = 6
 
 #instructions button variables 
+button3 = [WIDTH / 2, 325, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BRONZE]
+BTN_3_X = 0
+BTN_3_Y = 1
+BTN_3_WIDTH = 2
+BTN_3_HEIGHT = 3
+BTN_3_IS_CLICKED = 4
+BTN_3_COLOR = 5
+BTN_3_COLOR_CLICKED = 6
 
 #screen variables 
 current_screen = "menu"
