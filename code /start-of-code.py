@@ -18,10 +18,6 @@ rock_x_pos = []
 rock_y_pos = []
 rock_radius = []
 
-#big rocks 
-rock_big_x_pos = []
-rock_big_y_pos = []
-
 #the score variables 
 timer = 0
 current_score = 0
@@ -50,7 +46,7 @@ left_pressed = False
 right_pressed = False 
 
 #pause button on game screen 
-button_pause = [WIDTH/2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN_NOSE]
+button_pause = [WIDTH/2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
 BTN_pause_X = 0 
 BTN_pause_Y = 1 
 BTN_pasue_WIDTH = 2
@@ -90,9 +86,8 @@ def update(delta_time):
     global player_health, player_y, player_x, player_alvie
     global current_screen
     global up_pressed, down_pressed, left_pressed, right_pressed
-    global rock_x_pos, rock_big_y_pos, rock_radius
+    global rock_x_pos, rock_y_pos, rock_radius
     global player_w, player_l
-    global rock_big_y_pos, rock_big_x_pos
     global timer 
 
     if up_pressed == True:
@@ -105,6 +100,26 @@ def update(delta_time):
     if right_pressed == True:
         player_x += 10 
 
+#asteroids 
+    for index in range(len(rock_y_pos)):
+        rock_y_pos[index] -= 6 
+        if rock_y_pos[index] < 0:
+            rock_y_pos[index] = random.randrange(HEIGHT, HEIGHT + 50)
+            rock_x_pos[index] = random.randrange(0, WIDTH)
+    
+    
+    for i, (x, y) in enumerate(zip(rock_x_pos, rock_y_pos)):
+        a = x - player_x
+        b = y - player_y
+        distance = math.sqrt(a**2 + b**2)
+        if distance - 30 - 70 <= 0 and current_screen == "game":
+            player_health -= 25 
+            del rock_x_pos[i]
+            del rock_y_pos[i]
+    
+
+        
+         
 
 
 
