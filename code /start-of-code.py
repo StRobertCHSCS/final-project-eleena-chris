@@ -24,10 +24,10 @@ current_score = 0
 
 #images 
 truck_img = arcade.load_texture('images/truck.png')
-rock_img = arcade.load_texture()
+rock_img = arcade.load_texture('images/rock.png')
 palm_tree_img = arcade.load_texture('images/palm tree.png')
 trench_img = arcade.load_texture('images/trench.png')
-game_background = arcade.load_texture()
+game_background = arcade.load_texture('images/dirt_background_png.jpg')
 w_key_img = arcade.load_texture('images/W_key.png')
 s_key_img = arcade.load_texture('images/S_key.png')
 a_key_img = arcade.load_texture('images/A_key.png')
@@ -94,6 +94,16 @@ BTN_end_HEIGHT = 3
 BTN_end_IS_CLICKED = 4
 BTN_end_COLOR = 5
 BTN_end_COLOR_CLICKED = 6
+
+# Start Button Variables
+button2 = [WIDTH / 2, 250, 125, 40, False, arcade.color.YELLOW, arcade.color.BROWN_NOSE]
+BTN_2_X = 0
+BTN_2_Y = 1
+BTN_2_WIDTH = 2
+BTN_2_HEIGHT = 3
+BTN_2_IS_CLICKED = 4
+BTN_2_COLOR = 5
+BTN_2_COLOR_CLICKED = 6
 
 #instructions button variables 
 button3 = [WIDTH / 2, 325, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BRONZE]
@@ -168,8 +178,7 @@ elif current_screen == "instructions":
 elif current_screen == "End":
     timer += 0 
 elif current_screen == "pause":
-    timer += 0 
-elif
+    timer += 0  
         
 #Player Health Update
 if player_health == 0:
@@ -191,6 +200,20 @@ if player_x <= 0:
 if player_x <= 635:
     right_pressed = False    
 
+def on_draw():
+    arcade.start_render()
+    global current_screen
+    global player_x, player_y, rock_y_pos, rock_x_pos, rock_x_pos, rock_y_pos
+    global player_alive, player_health
+    global timer, current_score
+    arcade.start_render()
 
+    #draw 
+    x= 180
+    y = 325
 
-
+    #Main menu 
+    if current_screen = "menu":
+        arcade.set_background_color(arcade.color.WHITE)
+        arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
+        if button2
