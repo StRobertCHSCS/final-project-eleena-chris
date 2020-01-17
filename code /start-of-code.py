@@ -219,9 +219,42 @@ def on_draw():
         if button2
 
 #Instructions
+elif current_screen == "instructions":
+    arcade.set_background_color(arcade.color.COOL_BLACK)
+    player_alive = True
+    arcade.draw_text("INSTRUCTIONS", 230, 400, arcade.color.WHITE, 50, 800, "left", "Veneer", True, False)
+    arcade.draw_line(120, 390, 500, 390, arcade.color.WHITE, 10)
+    arcade.draw_texture_rectangle(320, 250, 60, 60, W_key_img)
+    arcade.draw_texture_rectangle(320, 180, 60, 60, S_key_img)
+    arcade.draw_texture_rectangle(250, 180, 60, 60, A_key_img)
+    arcade.draw_texture_rectangle(390, 180, 60, 60, D_key_img)
+    arcade.draw_text("UP", 305, 290, arcade.color.WHITE, 30, 150, "left", 'arial', True, False)
+    arcade.draw_text("DOWN", 300, 110, arcade.color.WHITE, 30, 200, "left", 'arial', True, False)
+    arcade.draw_text("LEFT", 170, 160, arcade.color.WHITE, 30, 200, "left", 'arial', True, False)
+    arcade.draw_text("RIGHT", 430, 160, arcade.color.WHITE, 30, 200, "left", 'arial', True, False)
+    arcade.draw_text("Press M to return to Menu", 5, 320, arcade.color.WHITE, 14, 300, "center", "Veneer", True, False)
+    arcade.draw_text("Try to avoid the obstacles", 5, 280, arcade.color.WHITE, 14, 300, "center", "Veneer", True, False)
 
 #Pause Screen
+elif current_screen == "pause":
+    arcade.set_background_color(arcade.color.BLACK)
+    arcade.draw_text("PAUSE", 40, 375, arcade.color.WHITE, 50, 800, "left", "Veneer", True, False)
+    arcade.draw_line(40, 360, 600, 360, arcade.color.WHITE, 10)
+    if button_pause_screen[BTN_pause_screen_IS_CLICKED]:
+        color = button_pause_screen[BTN_pause_screen_COLOR_CLICKED]
+    else:
+        color = button_pause_screen[BTN_pause_screen_COLOR]
 
+    if button_menu[BTN_menu_IS_CLICKED]:
+        color = button_menu[BTN_menu_COLOR_CLICKED]
+    else:
+        color = button_menu[BTN_menu_COLOR]
+
+    arcade.draw_rectangle_filled(320, 240, 126, 40, arcade.color.EARTH_YELLOW)
+    arcade.draw_rectangle_filled(320, 180, 126, 40, arcade.color.GREEN)
+    arcade.draw_text("Resume", 170, 225, arcade.color.BLACK, 28, 300, "center", 'arial', True, False)
+    arcade.draw_text("Main Menu", 170, 165, arcade.color.BLACK, 20, 300, "center", 'arial', True, False)
+    arcade.draw_text(f"Current Score: {timer}", 170, 120, arcade.color.WHITE, 18, 300, "center", 'arial', True, False)
 #Game Screen
 
 #Game Over Screen
