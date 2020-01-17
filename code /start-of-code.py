@@ -217,3 +217,31 @@ def on_draw():
         arcade.set_background_color(arcade.color.WHITE)
         arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
         if button2
+
+#Instructions
+
+#Pause Screen
+
+#Game Screen
+
+#Game Over Screen
+
+#Instructions Key
+
+#Secret Menu Key
+
+#Game Screen Keys
+
+#Player Movement Key
+
+#Menu Screen Buttons
+
+#Pause Button on Game Screen
+
+#Pause Screen Buttons
+
+#End Screen Button
+
+#Button Release
+
+#
