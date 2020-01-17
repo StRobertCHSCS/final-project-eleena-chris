@@ -216,7 +216,15 @@ def on_draw():
     if current_screen = "menu":
         arcade.set_background_color(arcade.color.WHITE)
         arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
-        if button2
+        if button2[BTN_2_IS_CLICKED]:
+            color = button2[BTN_2_COLOR_CLICKED]
+        else:
+            color = button2[BTN_2_COLOR]
+
+    if button3[BTN_3_IS_CLICKED]:
+        color = button3[BTN_3_COLOR_CLICKED]
+    else:
+        color = button3[BTN_3_COLOR]
 
 #Instructions
 
