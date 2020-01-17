@@ -24,7 +24,7 @@ current_score = 0
 
 #images 
 truck_img = arcade.load_texture('images/truck.png')
-rock_img = arcade.load_texture()
+rock_img = arcade.load_texture('images/rock.png')
 palm_tree_img = arcade.load_texture('images/palm tree.png')
 trench_img = arcade.load_texture('images/trench.png')
 game_background = arcade.load_texture('images/dirt_background_png.jpg')
@@ -206,3 +206,4 @@ def on_draw():
     if current_screen = "menu":
         arcade.set_background_color(arcade.color.WHITE)
         arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
+        if button2
