@@ -284,5 +284,3 @@ elif current_screen == "pause":
 #End Screen Button
 
 #Button Release
-
-#
