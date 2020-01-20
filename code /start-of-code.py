@@ -213,13 +213,13 @@ def on_draw():
     y = 325
 
     #Main menu 
-    if current_screen = "menu":
-        arcade.set_background_color(arcade.color.WHITE)
-        arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
-        if button2[BTN_2_IS_CLICKED]:
-            color = button2[BTN_2_COLOR_CLICKED]
-        else:
-            color = button2[BTN_2_COLOR]
+if current_screen = "menu":
+    arcade.set_background_color(arcade.color.WHITE)
+    arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
+    if button2[BTN_2_IS_CLICKED]:
+        color = button2[BTN_2_COLOR_CLICKED]
+    else:
+        color = button2[BTN_2_COLOR]
 
     if button3[BTN_3_IS_CLICKED]:
         color = button3[BTN_3_COLOR_CLICKED]
@@ -264,6 +264,40 @@ elif current_screen == "pause":
     arcade.draw_text("Main Menu", 170, 165, arcade.color.BLACK, 20, 300, "center", 'arial', True, False)
     arcade.draw_text(f"Current Score: {timer}", 170, 120, arcade.color.WHITE, 18, 300, "center", 'arial', True, False)
 #Game Screen
+    elif current_screen == "game"
+    arcade.draw_texture_rectangle(x, y, 1300, 645, game_background)
+    arcade.set_background_color(arcade.color.WHITE)
+    pause_screen()
+    arcade.draw_texture_rectangle(player_x, player_y, player_w[0], player_l[0], truck_img)
+    arcade.draw_text(f"SCORE: {timer}", 70, 450, arcade.color.WHITE, 12, 300, "left", "", True)
+    for x, y in zip(rock_x_pos, rock_y_pos):
+        arcade.draw_texture_rectangle(x, y, rock_radius[0], 40, rock_img)
+    max_bar_width = 170
+    bar_height = 40
+    health_pos_x = WIDTH - max_bar_width
+    health_pos_y = HEIGHT - bar_height
+
+    arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.BLACK)
+    pass 
+
+    health_width = player_health / player_max_health * max_bar_width
+
+    arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.WHITE)
+    if player_health == 100:
+        arcade.draw_xywh_rectangle_filled(health_pos_x, health_pos_y, max_bar_width, bar_height, arcade.color.GREEN)
+        arcade.draw_text("100/100", 500, health_pos_y, arcade.color.BLACK, font_size = 20)
+    elif player_health == 75:
+        arcade.draw_xywh_rectangle_filled(health_pos_x, health_pos_y, 130, 40, arcade.color.GREEN_YELLOW)
+        arcade.draw_text("75/100", 500, health_pos_y, arcade.color.BLACK, font_size = 20)
+    elif player_health == 50:
+        arcade.draw_xywh_rectangle_filled(health_pos_x, health_pos_y, 85, 40, arcade.color.YELLOW)
+        arcade.draw_text("50/100", 500, health_pos_y, arcade.color.BLACK, font_size = 20)
+    elif player_health == 25:
+        arcade.draw_xywh_rectangle_filled(health_pos_x, health_pos_y, 45, 40, arcade.color.RED)
+        arcade.draw_text("25/100", 500, health_pos_y, arcade.color.BLACK, font_size = 20)
+
+    if player_health == 0:
+        current_screen = "End"
 
 #Game Over Screen
 
