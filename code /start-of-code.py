@@ -37,7 +37,7 @@ pause_img = arcade.load_texture('images/pause.png')
 #health bar variables 
 player_health = 100
 player_max_health = 100 
-player_alvie = True 
+player_alive = True 
 
 #truck movements 
 up_pressed = False 
@@ -61,7 +61,7 @@ BTN_pause_screen_X = 0
 BTN_pause_screen_Y = 1
 BTN_pasue_WIDTH = 2
 BTN_pause_HEIGHT = 3
-BTN_pause_IS_CLICKED = 4
+BTN_pause_screen_IS_CLICKED = 4
 BTN_pause_COLOR = 5
 BTN_pause_COLOR_CLICKED = 6
 
@@ -133,12 +133,13 @@ def setup():
     arcade.run()
 
 def update(delta_time):
-    global player_health, player_y, player_x, player_alvie
+    global player_health, player_y, player_x, player_alive
     global current_screen
     global up_pressed, down_pressed, left_pressed, right_pressed
     global rock_x_pos, rock_y_pos, rock_radius
     global player_w, player_l
     global timer 
+
 
     # Player Movment
     if up_pressed == True:
@@ -164,10 +165,10 @@ def update(delta_time):
         b = y - player_y
         distance = math.sqrt(a**2 + b**2)
     
-    if distance - 30 - 70 <= 0 and current_screen == "game":
-        player_health -= 25 
-        del rock_x_pos[i]
-        del rock_y_pos[i]
+        if distance - 30 - 70 <= 0 and current_screen == "game":
+            player_health -= 25 
+            del rock_x_pos[i]
+            del rock_y_pos[i]
 
     #score update 
     if current_screen == "game":
@@ -214,7 +215,7 @@ def on_draw():
     y = 325
 
     #Main menu 
-    if current_screen = "menu":
+    if current_screen == "menu":
         arcade.set_background_color(arcade.color.WHITE)
         arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
         if button2[BTN_2_IS_CLICKED]:
@@ -265,7 +266,7 @@ def on_draw():
         arcade.draw_text("Main Menu", 170, 165, arcade.color.BLACK, 20, 300, "center", 'arial', True, False)
         arcade.draw_text(f"Current Score: {timer}", 170, 120, arcade.color.WHITE, 18, 300, "center", 'arial', True, False)
     #Game Screen
-    elif current_screen == "game"
+    elif current_screen == "game":
         arcade.draw_texture_rectangle(x, y, 1300, 645, game_background)
         arcade.set_background_color(arcade.color.WHITE)
         pause_screen()
