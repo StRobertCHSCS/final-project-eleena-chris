@@ -10,8 +10,8 @@ HEIGHT = 480
 player_x = WIDTH/2
 player_y = HEIGHT/2 
 
-player_w = []
-player_l = []
+player_w = [60]
+player_l = [100]
 
 #rock variables 
 rock_x_pos = []
@@ -230,10 +230,10 @@ def on_draw():
         arcade.draw_rectangle_filled(button3[BTN_3_X], button3[BTN_3_Y], button3[BTN_3_WIDTH], button3[BTN_3_HEIGHT], arcade.color.YELLOW)
         arcade.draw_text("INSTRUCTIONS", 170, 245, arcade.color.BLACK, 16, 300, "center", 'arial', True, False)
         arcade.draw_text("START", 165, 310, arcade.color.BLACK, 25, 300, "center", 'arial', True, False)
-        arcade.draw_text("READY, SET, LIFTOFF!", 65, 420, arcade.color.RED_ORANGE, 35, 500, "center", 'arial', True, False)
+        arcade.draw_text("READY, SET, DRIVE!", 65, 420, arcade.color.RED_ORANGE, 35, 500, "center", 'arial', True, False)
         arcade.draw_line(90, 410, 550, 410, arcade.color.RED_ORANGE, 8)
-        arcade.draw_texture_rectangle(90, 220, 100, 300, truck_img)
-        arcade.draw_texture_rectangle(520, 220, 100, 300, truck_img)
+        arcade.draw_texture_rectangle(90, 100, 340, 180, truck_img)
+        arcade.draw_texture_rectangle(560, 100, 340, 180, truck_img)
 
 
     #Instructions
