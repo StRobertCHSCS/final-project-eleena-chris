@@ -24,9 +24,9 @@ current_score = 0
 
 #images 
 truck_img = arcade.load_texture('images/truck1.png')
-rock_img = arcade.load_texture('images/rock.png')
-palm_tree_img = arcade.load_texture('images/palm tree.png')
-trench_img = arcade.load_texture('images/trench.png')
+rock_img = arcade.load_texture('images/rock1.png')
+palm_tree_img = arcade.load_texture('images/palmtree.png')
+trench_img = arcade.load_texture('images/trench1.png')
 game_background = arcade.load_texture('images/dirt_background_png.jpg')
 W_key_img = arcade.load_texture('images/W_key.png')
 S_key_img = arcade.load_texture('images/S_key.png')
