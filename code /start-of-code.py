@@ -301,7 +301,30 @@ def on_draw():
             current_screen = "End"
 
 #Game Over Screen
+    elif current_screen == "End":
+        arcade.set_background_color(arcade.color.BLACK)
+        current_score = timer 
+        arcade.draw_text("GAME OVER", 230, 400, arcade.color.WHITE, 50, 800, "left", "Veneer", True, False)
+        arcade.draw_line(120, 390, 500, 390, arcade.color.WHITE, 10)
+        arcade.draw_text(f"Your Score was {current_score}", 250, 150, arcade.color.WHITE, 20, 800, "left", "arial", True, False)
 
+        if button_end[BTN_end_IS_CLICKED]:
+            color = button_end[BTN_end_COLOR_CLICKED]
+        else:
+            color = button_end[BTN_end_COLOR]
+        arcade.draw_rectangle_filled(320, 240, 126, 40, arcade.color.EARTH_YELLOW)
+        arcade.draw_text("Restart", 170, 225, arcade.color.BLACK, 28, 300, "center", 'arial', True, False)
+        arcade.draw_texture_rectangle(90, 210, 100, 290, truck_img)
+        arcade.draw_texture_rectangle(520, 210, 100, 290, truck_img)
+        for i, (x, y) in enumerate(zip(rock_x_pos, rock_y_pos)):
+            a = x - player_x
+            b = y - player_y
+            distance = math.sqrt(a ** 2 + b ** 2)
+            if distance - 30 - 70 <= 0 and current_screen == "game":
+                player_health -= 25
+                del rock_x_pos[i]
+                del rock_y_pos[i]
+        player_health = 100
 
 def on_key_press(key, modifiers):
     global current_screen, timer
