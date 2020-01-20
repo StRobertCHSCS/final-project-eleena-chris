@@ -59,11 +59,11 @@ BTN_pause_COLOR_CLICKED = 6
 button_pause_screen = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
 BTN_pause_screen_X = 0
 BTN_pause_screen_Y = 1
-BTN_pasue_WIDTH = 2
-BTN_pause_HEIGHT = 3
-BTN_pause_IS_CLICKED = 4
-BTN_pause_COLOR = 5
-BTN_pause_COLOR_CLICKED = 6
+BTN_pasue_screen_WIDTH = 2
+BTN_pause_screen_HEIGHT = 3
+BTN_pause_screen_IS_CLICKED = 4
+BTN_pause_screen_COLOR = 5
+BTN_pause_screen_COLOR_CLICKED = 6
 
 #end screen button 
 button_end = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
@@ -214,7 +214,8 @@ def on_draw():
     y = 325
 
     #Main menu 
-    if current_screen = "menu":
+    if current_screen == "menu":
+        
         arcade.set_background_color(arcade.color.WHITE)
         arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
         if button2[BTN_2_IS_CLICKED]:
