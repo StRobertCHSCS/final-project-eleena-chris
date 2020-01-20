@@ -1,3 +1,4 @@
+import arcade
 import random
 import math
 
@@ -22,15 +23,15 @@ timer = 0
 current_score = 0
 
 #images 
-truck_img = arcade.load_texture('images/truck.png')
+truck_img = arcade.load_texture('images/truck1.png')
 rock_img = arcade.load_texture('images/rock.png')
 palm_tree_img = arcade.load_texture('images/palm tree.png')
 trench_img = arcade.load_texture('images/trench.png')
 game_background = arcade.load_texture('images/dirt_background_png.jpg')
-w_key_img = arcade.load_texture('images/W_key.png')
-s_key_img = arcade.load_texture('images/S_key.png')
-a_key_img = arcade.load_texture('images/A_key.png')
-d_key_img = arcade.load_texture('images/D_key.png')
+W_key_img = arcade.load_texture('images/W_key.png')
+S_key_img = arcade.load_texture('images/S_key.png')
+A_key_img = arcade.load_texture('images/A_key.png')
+D_key_img = arcade.load_texture('images/D_key.png')
 pause_img = arcade.load_texture('images/pause.png')
 
 #health bar variables 
@@ -231,8 +232,8 @@ def on_draw():
         arcade.draw_text("START", 165, 310, arcade.color.BLACK, 25, 300, "center", 'arial', True, False)
         arcade.draw_text("READY, SET, DRIVE!", 65, 420, arcade.color.RED_ORANGE, 35, 500, "center", 'arial', True, False)
         arcade.draw_line(90, 410, 550, 410, arcade.color.RED_ORANGE, 8)
-        arcade.draw_texture_rectangle(90, 100, 340, 180, truck_img)
-        arcade.draw_texture_rectangle(560, 100, 340, 180, truck_img)
+        arcade.draw_texture_rectangle(150, 220, 500, 300, truck_img)
+        arcade.draw_texture_rectangle(520, 220, 500, 300, truck_img)
 
 
     #Instructions
@@ -322,8 +323,8 @@ def on_draw():
             color = button_end[BTN_end_COLOR]
         arcade.draw_rectangle_filled(320, 240, 126, 40, arcade.color.EARTH_YELLOW)
         arcade.draw_text("Restart", 170, 225, arcade.color.BLACK, 28, 300, "center", 'arial', True, False)
-        arcade.draw_texture_rectangle(90, 210, 100, 290, truck_img)
-        arcade.draw_texture_rectangle(520, 210, 100, 290, truck_img)
+        arcade.draw_texture_rectangle(90, 210, 500, 300, truck_img)
+        arcade.draw_texture_rectangle(520, 210, 500, 300, truck_img)
         for i, (x, y) in enumerate(zip(rock_x_pos, rock_y_pos)):
             a = x - player_x
             b = y - player_y
