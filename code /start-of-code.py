@@ -37,7 +37,7 @@ pause_img = arcade.load_texture('images/pause.png')
 #health bar variables 
 player_health = 100
 player_max_health = 100 
-player_alvie = True 
+player_alive = True 
 
 #truck movements 
 up_pressed = False 
@@ -133,12 +133,13 @@ def setup():
     arcade.run()
 
 def update(delta_time):
-    global player_health, player_y, player_x, player_alvie
+    global player_health, player_y, player_x, player_alive
     global current_screen
     global up_pressed, down_pressed, left_pressed, right_pressed
     global rock_x_pos, rock_y_pos, rock_radius
     global player_w, player_l
     global timer 
+
 
     # Player Movment
     if up_pressed == True:
@@ -164,10 +165,10 @@ def update(delta_time):
         b = y - player_y
         distance = math.sqrt(a**2 + b**2)
     
-    if distance - 30 - 70 <= 0 and current_screen == "game":
-        player_health -= 25 
-        del rock_x_pos[i]
-        del rock_y_pos[i]
+        if distance - 30 - 70 <= 0 and current_screen == "game":
+            player_health -= 25 
+            del rock_x_pos[i]
+            del rock_y_pos[i]
 
     #score update 
     if current_screen == "game":
@@ -207,7 +208,6 @@ def on_draw():
     global player_x, player_y, rock_y_pos, rock_x_pos, rock_x_pos, rock_y_pos
     global player_alive, player_health
     global timer, current_score
-    arcade.start_render()
 
     #draw 
     x= 180
@@ -215,9 +215,7 @@ def on_draw():
 
     #Main menu 
     if current_screen == "menu":
-        
         arcade.set_background_color(arcade.color.WHITE)
-        arcade.draw_texture_rectangle(x, y, 1000, 645, game_background)
         if button2[BTN_2_IS_CLICKED]:
             color = button2[BTN_2_COLOR_CLICKED]
         else:
@@ -227,6 +225,16 @@ def on_draw():
             color = button3[BTN_3_COLOR_CLICKED]
         else:
             color = button3[BTN_3_COLOR]
+       
+        arcade.draw_rectangle_filled(button2[BTN_2_X], button2[BTN_2_Y], 150, button2[BTN_2_HEIGHT], arcade.color.EARTH_YELLOW)
+        arcade.draw_rectangle_filled(button3[BTN_3_X], button3[BTN_3_Y], button3[BTN_3_WIDTH], button3[BTN_3_HEIGHT], arcade.color.YELLOW)
+        arcade.draw_text("INSTRUCTIONS", 170, 245, arcade.color.BLACK, 16, 300, "center", 'arial', True, False)
+        arcade.draw_text("START", 165, 310, arcade.color.BLACK, 25, 300, "center", 'arial', True, False)
+        arcade.draw_text("READY, SET, LIFTOFF!", 65, 420, arcade.color.RED_ORANGE, 35, 500, "center", 'arial', True, False)
+        arcade.draw_line(90, 410, 550, 410, arcade.color.RED_ORANGE, 8)
+        arcade.draw_texture_rectangle(90, 220, 100, 300, truck_img)
+        arcade.draw_texture_rectangle(520, 220, 100, 300, truck_img)
+
 
     #Instructions
     elif current_screen == "instructions":
@@ -266,7 +274,7 @@ def on_draw():
         arcade.draw_text("Main Menu", 170, 165, arcade.color.BLACK, 20, 300, "center", 'arial', True, False)
         arcade.draw_text(f"Current Score: {timer}", 170, 120, arcade.color.WHITE, 18, 300, "center", 'arial', True, False)
     #Game Screen
-    elif current_screen == "game"
+    elif current_screen == "game":
         arcade.draw_texture_rectangle(x, y, 1300, 645, game_background)
         arcade.set_background_color(arcade.color.WHITE)
         pause_screen()
