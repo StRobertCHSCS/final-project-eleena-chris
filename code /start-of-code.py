@@ -374,4 +374,23 @@ def on_mouse_press(x, y, button, modifiers):
 
 def on_mouse_release(x, y, button, modifiers):
     global current_screen
+    
     #Button Release
+    button2[BTN_2_IS_CLICKED] = False
+    button3[BTN_3_IS_CLICKED] = False
+    button_pause[BTN_pause_IS_CLICKED] = False
+    button_pause_screen[BTN_pause_screen_IS_CLICKED] = False
+    button_menu[BTN_menu_IS_CLICKED] = False
+    button_end[BTN_end_IS_CLICKED] = False
+def pause_screen():
+    if button_pause[BTN_pause_IS_CLICKED]:
+        color = button_pause[BTN_pause_IS_CLICKED]
+    else:
+       color = button_pause[BTN_pause_COLOR]
+    
+    arcade.draw_rectangle_filled(20, 460, 40, 40, arcade.color.EARTH_YELLOW)
+    arcade.draw_texture_rectangle(20, 460, 40, 40, pause_img)
+
+if __name__ == '__main__':
+    setup()
+
