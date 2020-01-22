@@ -297,7 +297,6 @@ def on_draw():
         arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.BLACK)
         pass 
 
-
         health_width = player_health / player_max_health * max_bar_width
 
         arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.WHITE)
