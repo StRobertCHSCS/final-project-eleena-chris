@@ -10,8 +10,8 @@ HEIGHT = 480
 player_x = WIDTH/2
 player_y = HEIGHT/2 
 
-player_w = [60]
-player_l = [100]
+player_w = [325]
+player_l = [200]
 
 #rock variables 
 rock_x_pos = []
