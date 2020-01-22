@@ -234,12 +234,12 @@ def on_draw():
         arcade.draw_line(90, 410, 550, 410, arcade.color.RED_ORANGE, 8)
         arcade.draw_texture_rectangle(150, 220, 500, 300, truck_img)
         arcade.draw_texture_rectangle(520, 220, 500, 300, truck_img)
-        arcade.draw_texture_rectangle(50, 50, 130, 100, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(50, 200, 130, 100, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(50, 400, 130, 100, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 50, 130, 100, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 200, 130, 100, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 400, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 50, 180, 150, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 200, 180, 150, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 400, 180, 150, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(640, 50, 180, 150, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(640, 200, 180, 150, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(640, 400, 180, 150, palm_tree_img, 0)
 
 
 
@@ -297,7 +297,6 @@ def on_draw():
         arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.BLACK)
         pass 
 
-
         health_width = player_health / player_max_health * max_bar_width
 
         arcade.draw_xywh_rectangle_filled(WIDTH - max_bar_width, HEIGHT - bar_height, max_bar_width, bar_height, arcade.color.WHITE)
@@ -316,6 +315,15 @@ def on_draw():
 
         if player_health == 0:
             current_screen = "End"
+
+        arcade.draw_texture_rectangle(50, 50, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(150, 40, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(250, 20, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(50, 150, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(330, 350, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(510, 60, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(40, 100, 60, 60, rock_img, 0)
+        arcade.draw_texture_rectangle(160, 68, 60, 60, rock_img, 0)
 
 #Game Over Screen
     elif current_screen == "End":
