@@ -14,9 +14,9 @@ player_w = [325]
 player_l = [200]
 
 #rock variables 
-rock_x_pos = []
-rock_y_pos = []
-rock_radius = []
+rock_x_pos = [100, 200, 300, 400, 350]
+rock_y_pos = [480, 480, 480, 480, 480]
+rock_radius = [50]
 
 #the score variables 
 timer = 0
@@ -315,15 +315,15 @@ def on_draw():
 
         if player_health == 0:
             current_screen = "End"
-
-        arcade.draw_texture_rectangle(50, 50, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(150, 40, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(250,600, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(540, 150, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(330, 350, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(510, 60, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(40, 100, 160, 200, rock_img, 0)
-        arcade.draw_texture_rectangle(160, 68, 160, 200, rock_img, 0)
+  
+        
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
+        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
 
 #Game Over Screen
     elif current_screen == "End":
