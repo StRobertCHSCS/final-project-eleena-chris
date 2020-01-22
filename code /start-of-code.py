@@ -16,7 +16,7 @@ player_l = [200]
 #rock variables 
 rock_x_pos = [100, 200, 300, 400, 350]
 rock_y_pos = [480, 480, 480, 480, 480]
-rock_radius = [50]
+rock_radius = [150]
 
 #the score variables 
 timer = 0
@@ -316,15 +316,7 @@ def on_draw():
         if player_health == 0:
             current_screen = "End"
   
-        """
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-        arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-"""
+
 #Game Over Screen
     elif current_screen == "End":
         arcade.set_background_color(arcade.color.BLACK)
