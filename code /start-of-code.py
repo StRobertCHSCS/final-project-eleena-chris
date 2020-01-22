@@ -316,7 +316,7 @@ def on_draw():
         if player_health == 0:
             current_screen = "End"
   
-        
+        """
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
@@ -324,7 +324,7 @@ def on_draw():
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
         arcade.draw_texture_rectangle(rock_x_pos, rock_y_pos, rock_radius, rock_img, 0)
-
+"""
 #Game Over Screen
     elif current_screen == "End":
         arcade.set_background_color(arcade.color.BLACK)
