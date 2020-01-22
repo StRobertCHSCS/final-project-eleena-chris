@@ -15,7 +15,7 @@ player_l = [200]
 
 #rock variables 
 rock_x_pos = [100, 200, 300, 400, 350]
-rock_y_pos = [480, 480, 480, 480, 480]
+rock_y_pos = [550, 550, 570, 550, 520]
 rock_radius = [150]
 
 #the score variables 
