@@ -234,12 +234,12 @@ def on_draw():
         arcade.draw_line(90, 410, 550, 410, arcade.color.RED_ORANGE, 8)
         arcade.draw_texture_rectangle(150, 220, 500, 300, truck_img)
         arcade.draw_texture_rectangle(520, 220, 500, 300, truck_img)
-        arcade.draw_texture_rectangle(50, 50, 70, 40, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(50, 200, 70, 40, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(50, 400, 70, 40, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 50, 70, 40, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 200, 70, 40, palm_tree_img, 0)
-        arcade.draw_texture_rectangle(600, 400, 70, 40, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 50, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 200, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(50, 400, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(600, 50, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(600, 200, 130, 100, palm_tree_img, 0)
+        arcade.draw_texture_rectangle(600, 400, 130, 100, palm_tree_img, 0)
 
 
 
