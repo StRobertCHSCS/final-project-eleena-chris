@@ -26,7 +26,6 @@ current_score = 0
 truck_img = arcade.load_texture('images/truck1.png')
 rock_img = arcade.load_texture('images/rock1.png')
 palm_tree_img = arcade.load_texture('images/palmtree.png')
-trench_img = arcade.load_texture('images/trench1.png')
 game_background = arcade.load_texture('images/dirt_background_png.jpg')
 W_key_img = arcade.load_texture('images/W_key.png')
 S_key_img = arcade.load_texture('images/S_key.png')
@@ -85,15 +84,6 @@ BTN_menu_IS_CLICKED = 4
 BTN_menu_COLOR = 5
 BTN_menu_COLOR_CLICKED = 6
 
-#start button variables 
-button_end = [WIDTH / 2, 250, 125, 40, False, arcade.color.BROWN_NOSE, arcade.color.BROWN]
-BTN_end_X = 0
-BTN_end_Y = 1
-BTN_end_WIDTH = 2
-BTN_end_HEIGHT = 3
-BTN_end_IS_CLICKED = 4
-BTN_end_COLOR = 5
-BTN_end_COLOR_CLICKED = 6
 
 # Start Button Variables
 button2 = [WIDTH / 2, 250, 125, 40, False, arcade.color.YELLOW, arcade.color.BROWN_NOSE]
